@@ -1,0 +1,114 @@
+@import './styles/mixins';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Gilroy-Light";
+  src: url("/src/assets/fonts/Gilroy-Light.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "Gilroy-Bold";
+  src: url("/src/assets/fonts/Gilroy-ExtraBold.otf") format("truetype");
+}
+
+body {
+  font-family: "Gilroy-Light", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  // background: linear-gradient(to bottom, #000000 0%, #332f65 100%);
+}
+
+:root {
+  --main-text-color: #ffff;
+  --pink-accent-color: #ff3459;
+  --blue-accent-color: #0048ff;
+  --background-color: #302e5a;
+  --background-form: #303a53;
+  --background-input: #272d3d;
+  --text-size: 14px;
+
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-size: 14px;
+  font-family: Assistant, sans-serif;
+  font-style: normal;
+  line-height: 1.5;
+  text-rendering: optimizespeed;
+  color: var(--main-text-color);
+  background-color: #242731;
+  background-image: radial-gradient(circle at 100% 100%, #332F65, transparent 95%);
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  height: 100vh; 
+  margin: 0;
+
+}
+
+@include screen-size('medium') {
+:root{
+  background-color: #242731;
+  background-image: radial-gradient(circle at 0% 0%, #332F65, transparent 25%),
+  radial-gradient(circle at 100% 0%, #332F65, transparent 40%);
+}
+}
+
+@include screen-size('large') {
+
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button,
+select {
+  color: inherit;
+  font-family: inherit;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+p,
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}

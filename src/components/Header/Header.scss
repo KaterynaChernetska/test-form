@@ -1,0 +1,107 @@
+@import "../../styles/mixins.scss";
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 16px 36px 30px;
+}
+
+.logo-link {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+}
+
+.logo-svg {
+  width: 28px;
+  height: 32px;
+}
+
+.logo-container {
+  text-align: center;
+}
+
+.powercode-logo-svg {
+  margin-bottom: 4px;
+  width: 66px;
+  height: 7px;
+}
+
+.academy-logo-svg {
+  width: 66px;
+  height: 9px;
+}
+
+.calendar-svg {
+  width: 11px;
+  height: 11.5px;
+}
+
+.clock-svg {
+  width: 10.34px;
+  height: 10.34px;
+}
+
+.header-date-container {
+  display: flex;
+  gap: 6px;
+}
+
+.header-date-container li {
+  background-color: var(--background-color);
+  display: flex;
+  border-radius: 6px;
+  padding: 7px 13px;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  align-items: center;
+  justify-content: center;
+}
+
+@include screen-size("medium") {
+  .header {
+    padding: 34px 60px;
+  }
+  .logo-svg {
+    width: 50px;
+    height: 56px;
+  }
+  .powercode-logo-svg {
+    margin-bottom: 4px;
+    width: 118px;
+    height: 12.25px;
+  }
+  .academy-logo-svg {
+    width: 118px;
+    height: 15.75px;
+  }
+  .calendar-svg {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .clock-svg {
+    width: 14px;
+    height: 14px;
+  }
+  .header-date-container {
+    gap: 18px;
+  }
+  .header-date-container li {
+    width: 141px;
+    font-size: 14px;
+  }
+}
+
+@include screen-size("large") {
+    .header {
+  
+        padding: 34px 256px;
+      }
+  .header-date-container {
+
+  }
+
+}
