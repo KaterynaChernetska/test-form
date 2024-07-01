@@ -1,4 +1,4 @@
-import "./Header.scss";
+import "./header.scss";
 import MobileLogo from "../../assets/icons/logo_small.svg";
 import Powercode from "../../assets/icons/POWERCODE.svg";
 import Academy from "../../assets/icons/ACADEMY.svg";

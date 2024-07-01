@@ -62,7 +62,7 @@
 
 @include screen-size("medium") {
   .header {
-    padding: 34px 60px;
+    padding: 36px 60px;
   }
   .logo-svg {
     width: 50px;
@@ -81,7 +81,7 @@
     width: 14px;
     height: 14px;
   }
-  
+
   .clock-svg {
     width: 14px;
     height: 14px;
@@ -96,12 +96,7 @@
 }
 
 @include screen-size("large") {
-    .header {
-  
-        padding: 34px 256px;
-      }
-  .header-date-container {
-
+  .header {
+    padding: 34px 256px;
   }
-
 }

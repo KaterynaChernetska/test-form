@@ -1,4 +1,4 @@
-@import './styles/mixins';
+@import "./styles/mixins";
 
 *,
 *::before,
@@ -18,16 +18,12 @@
 
 body {
   font-family: "Gilroy-Light", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 html {
   scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  // background: linear-gradient(to bottom, #000000 0%, #332f65 100%);
 }
 
 :root {
@@ -44,33 +40,57 @@ body {
   min-width: 320px;
   min-height: 100vh;
   margin: 0;
+  font-weight: 400;
   padding: 0;
   overflow-x: hidden;
   font-size: 14px;
-  font-family: Assistant, sans-serif;
   font-style: normal;
   line-height: 1.5;
   text-rendering: optimizespeed;
   color: var(--main-text-color);
   background-color: #242731;
-  background-image: radial-gradient(circle at 100% 100%, #332F65, transparent 95%);
-  background-size: cover; 
-  background-repeat: no-repeat; 
-  height: 100vh; 
+  background-image: radial-gradient(
+    circle at 100% 100%,
+    #332f65,
+    transparent 95%
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
   margin: 0;
-
 }
 
-@include screen-size('medium') {
-:root{
-  background-color: #242731;
-  background-image: radial-gradient(circle at 0% 0%, #332F65, transparent 25%),
-  radial-gradient(circle at 100% 0%, #332F65, transparent 40%);
-}
-}
+@include screen-size("medium") {
+  :root {
+    background-color: #242731;
+    background-image: radial-gradient(circle at 0% 0%, #332f65, transparent 25%),
+      radial-gradient(circle at 100% 0%, #332f65, transparent 40%);
+  }
 
-@include screen-size('large') {
-
+  body {
+    background-image: url("../src/assets/icons/html.svg"),
+      url("../src/assets/icons/css.svg"),
+      url("../src/assets/icons/javascript.svg"),
+      url("../src/assets/icons/visual_studio.svg"),
+      url("../src/assets/icons/sublime.svg");
+    background-repeat: no-repeat;
+    background-size: 88px, 85px, 72px, 61px, 74px;
+    background-position: top 441px right 36px, top 541px right 133px,
+    top 604px right 36.3px, top 774px right 66px, top 684px right 153px;
+  }
+}
+@include screen-size("large") {
+  body {
+    background-image: url("../src/assets/icons/html.svg"),
+      url("../src/assets/icons/css.svg"),
+      url("../src/assets/icons/javascript.svg"),
+      url("../src/assets/icons/visual_studio.svg"),
+      url("../src/assets/icons/sublime.svg");
+    background-repeat: no-repeat;
+    background-size: 88px, 85px, 72px, 61px, 54px;
+    background-position: top 241px right 36px, top 341px right 133px,
+      top 404px right 36.3px, top 574px right 66px, top 484px right 153px;
+  }
 }
 
 img {

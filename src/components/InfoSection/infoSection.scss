@@ -1,0 +1,108 @@
+@import "../../styles/mixins.scss";
+
+.info-section-container {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.info-section-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4.5px;
+  padding: 3px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 3px;
+  background-color: var(--blue-accent-color);
+  width: 89px;
+}
+
+.info-section-name img {
+  width: 14.2px;
+  height: 14.2px;
+}
+
+.info-section-title {
+  color: var(--pink-accent-color);
+  text-transform: uppercase;
+  font-size: 52px;
+  font-weight: 800;
+  font-family: "Gilroy-Bold", sans-serif;
+}
+
+.info-section-subtitle {
+  margin-bottom: 16px;
+}
+
+.info-section-subtitle p:first-child {
+  display: inline-block;
+  margin-right: 12px;
+  border-radius: 3.57px;
+  background-color: var(--pink-accent-color);
+  transform: rotate(-3.49deg);
+}
+
+.info-section-subtitle p:first-child .inner-text {
+  display: inline-block;
+  transform: rotate(3.49deg);
+  text-transform: uppercase;
+  font-size: 16px;
+  padding: 2px 8px;
+  font-family: "Gilroy-Bold", sans-serif;
+}
+
+.info-section-subtitle span {
+  font-size: 15px;
+  font-weight: 600;
+}
+.info-section-information {
+  margin-bottom: 20px;
+}
+
+
+@include screen-size("medium") {
+  .info-section-name {
+    font-size: 16px;
+    gap: 6px;
+    width: 119px;
+  }
+  .info-section-name img {
+    width: 17.2px;
+    height: 17.2px;
+  }
+  .info-section-title {
+    font-size: 77px;
+  }
+  .info-section-subtitle p:first-child .inner-text {
+    font-size: 23px;
+  }
+  .info-section-subtitle span {
+    font-size: 21px;
+  }
+  .info-section-subtitle {
+    margin-bottom: 30px;
+  }
+  .info-section-information {
+    font-size: 18px;
+    margin-bottom: 58px;
+    padding: 0 140px;
+  }
+}
+
+@include screen-size("large") {
+  .info-section-information {
+    font-size: 18px;
+    margin-bottom: 58px;
+    padding: 0px;
+  }
+  .info-section-container {
+    align-items: flex-start;
+  }
+  .info-section-information{
+    align-self: self-start;
+    text-align: left;
+  }
+}

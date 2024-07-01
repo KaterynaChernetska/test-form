@@ -1,0 +1,157 @@
+@import "../../styles/mixins.scss";
+
+.form-container {
+  margin-bottom: 36px;
+//   width: 100%;
+}
+.sign-form {
+  background-color: var(--background-form);
+  border-radius: 9px;
+  padding: 41px 21px 40px 21px;
+  display: flex;
+  flex-direction: column;
+}
+.sign-form h5 {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 18px 0;
+}
+.accent-word {
+  color: var(--pink-accent-color);
+}
+
+.email-input,
+.name-input {
+  background-color: var(--background-input);
+  color: var(--main-text-color);
+  width: 100%;
+  margin-bottom: 14px;
+  border-radius: 5px;
+  outline: none;
+  padding: 12px 26px;
+  border: none;
+}
+.email-input:focus,
+.name-input:focus {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+.email-input::placeholder,
+.name-input::placeholder {
+  color: var(--main-text-color);
+  font-size: 12px;
+}
+.react-tel-input .form-control {
+  background-color: var(--background-input);
+  font-family: "Gilroy-Light", sans-serif;
+  font-size: 12px;
+  color: var(--main-text-color);
+  width: 100%;
+  margin-bottom: 14px;
+  border-radius: 5px;
+  outline: none;
+  padding: 12px 26px 12px 60px;
+  border: none;
+}
+.react-tel-input .form-control:focus {
+  background-color: var(--background-input);
+  color: var(--main-text-color);
+}
+.react-tel-input .selected-flag .flag {
+  margin-top: -18px;
+  margin-left: 16px;
+}
+.react-tel-input .selected-flag:focus:before,
+.react-tel-input .selected-flag.open:before {
+  border-color: transparent;
+  box-shadow: none;
+}
+.country-name {
+  color: var(--background-form);
+}
+.form-group {
+  display: flex;
+}
+.form-group button {
+  cursor: pointer;
+  margin: 0 auto;
+  align-self: center;
+  padding: 11px 34px;
+  font-weight: 700;
+  background-color: var(--blue-accent-color);
+  border: none;
+  border-radius: 4.48px;
+  margin-bottom: 18.45px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.form-group button:hover {
+    background-color: rgba(0, 72, 255, 0.8);
+    transform: scale(1.05);
+  }
+.form-message {
+  color: var(--pink-accent-color);
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.accept-policy {
+  font-size: 11px;
+  text-align: center;
+  color: #ffffff80;
+}
+.accept-policy span {
+  text-decoration: underline;
+}
+@include screen-size("medium") {
+  .form-container {
+    max-width: 366px;
+  }
+  .sign-form {
+    padding: 50px 58px;
+  }
+  .sign-form h5 {
+    font-size: 22px;
+    margin: 0 0 20px 0;
+  }
+  .email-input,
+  .name-input {
+    height: 51px;
+    padding: 14px 22px;
+    color: #d7d7d7;
+    font-size: 13px;
+  }
+  .email-input::placeholder,
+  .name-input::placeholder {
+    color: #d7d7d7;
+    font-size: 13px;
+  }
+  .react-tel-input .form-control {
+    font-size: 13px;
+    color: #d7d7d7;
+    height: 51px;
+  }
+  .react-tel-input .form-control:focus {
+    color: #d7d7d7;
+  }
+  .form-group button {
+    font-size: 15px;
+    width: 100%;
+    padding: 11px 34px;
+    background-color: var(--pink-accent-color);
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  .form-group button:hover {
+      background-color: rgba(255, 52, 89, 0.8);
+      transform: scale(1.05);
+    }
+
+}
+
+@include screen-size("large") {
+  .form-container {
+    width: 50%;
+  }
+}
