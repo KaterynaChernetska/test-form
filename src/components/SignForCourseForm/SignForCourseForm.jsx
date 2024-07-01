@@ -6,7 +6,6 @@ import "./signForCourseForm.scss";
 const token = import.meta.env.VITE_APP_TELEGRAM_BOT_TOKEN;
 const chat_id = import.meta.env.VITE_APP_TELEGRAM_CHAT_ID;
 
-
 const SignForCourseForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -44,35 +43,39 @@ const SignForCourseForm = () => {
     const telegramMessage = `Name: ${name}\nEmail: ${email}\nPhone: ${phone}`;
 
     fetch(url, {
-      method: 'POST',
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json'
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({
         chat_id: chat_id,
-        text: telegramMessage
+        text: telegramMessage,
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.ok) {
+          setMessage("Success: Data sent successfully");
+        } else {
+          setMessage("Error: Failed to send data");
+        }
       })
-    })
-    .then(response => response.json())
-    .then(data => {
-      if (data.ok) {
-        setMessage('Success: Data sent successfully');
-      } else {
-        setMessage('Error: Failed to send data');
-      }
-    })
-    .catch(error => {
-      console.error('Error:', error);
-      setMessage('Error: Failed to send data');
-    });
+      .catch((error) => {
+        console.error("Error:", error);
+        setMessage("Error: Failed to send data");
+      });
+    setName("");
+    setEmail(" ");
+    setPhone(" ");
   };
 
   return (
     <div className="form-container">
-  
       <form className="sign-form" onSubmit={handleSubmit}>
-        <h5>Запишитесь <span className="accent-word">бесплатно</span> <br/>
-        и получите подарок</h5>
+        <h5>
+          Запишитесь <span className="accent-word">бесплатно</span> <br />и
+          получите подарок
+        </h5>
         {message && <div className="form-message">{message}</div>}
         <div className="form-group">
           <input
@@ -105,16 +108,17 @@ const SignForCourseForm = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-                 className="email-input"
+            className="email-input"
           />
         </div>
         <div className="form-group">
           <button type="submit">Записаться бесплатно</button>
         </div>
-        <p className="accept-policy">Нажимая на кнопку я согашаюсь <br/>
-        <span> с политикой конфидециальности</span></p>
+        <p className="accept-policy">
+          Нажимая на кнопку я согашаюсь <br />
+          <span> с политикой конфидециальности</span>
+        </p>
       </form>
- 
     </div>
   );
 };

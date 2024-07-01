@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <Header />
-      {width >= 1439 ? <p className="under-text">front-end developer </p> : ""}
+    
       <div className="main-container">
         {width > 1439 ? (
           <>
@@ -19,6 +19,7 @@ function App() {
               <AdditionalInfo />
             </div>
             <SignForCourseForm />
+           <p className="under-text">front-end developer </p> 
           </>
         ) : (
           <>

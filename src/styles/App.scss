@@ -5,12 +5,13 @@
   flex-direction: column;
   align-items: center;
   padding: 0px 16px 0px 16px;
+  position: relative;
 }
 
 .under-text {
   font-family: "Gilroy-Bold", sans-serif;
-  position: fixed;
-  bottom: -40px;
+  position: absolute;
+  bottom: -50px;
   left: 0;
   width: 100%;
   text-align: center;
@@ -67,7 +68,7 @@
 
 @include screen-size("large") {
   .main-container {
-    padding: 92px 256px;
+    padding: 92px 256px 140px 256px;
     flex-direction: row;
     align-items: normal;
     gap: 135px;

@@ -2,7 +2,6 @@
 
 .form-container {
   margin-bottom: 36px;
-//   width: 100%;
 }
 .sign-form {
   background-color: var(--background-form);
@@ -153,5 +152,6 @@
 @include screen-size("large") {
   .form-container {
     width: 50%;
+    margin-bottom: 0px;
   }
 }
