@@ -3,6 +3,10 @@ import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/bootstrap.css";
 import "./signForCourseForm.scss";
 
+const token = import.meta.env.VITE_APP_TELEGRAM_BOT_TOKEN;
+const chat_id = import.meta.env.VITE_APP_TELEGRAM_CHAT_ID;
+
+
 const SignForCourseForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -36,24 +40,31 @@ const SignForCourseForm = () => {
       return;
     }
 
-    const data = { name, email, phone };
-    setMessage("Sending data...");
+    const url = `https://api.telegram.org/bot${token}/sendMessage`;
+    const telegramMessage = `Name: ${name}\nEmail: ${email}\nPhone: ${phone}`;
 
-    // Make a request to your server to send data to Telegram
-    // fetch('YOUR_SERVER_ENDPOINT', {
-    //     method: 'POST',
-    //     headers: {
-    //         'Content-Type': 'application/json',
-    //     },
-    //     body: JSON.stringify(data),
-    // })
-    //     .then(response => response.json())
-    //     .then(result => {
-    //         setMessage('Success: Data sent successfully');
-    //     })
-    //     .catch(error => {
-    //         setMessage('Error: Failed to send data');
-    //     });
+    fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        chat_id: chat_id,
+        text: telegramMessage
+      })
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.ok) {
+        setMessage('Success: Data sent successfully');
+      } else {
+        setMessage('Error: Failed to send data');
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      setMessage('Error: Failed to send data');
+    });
   };
 
   return (
