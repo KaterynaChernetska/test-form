@@ -4,6 +4,7 @@
   display: flex;
   gap: 22px;
   flex-direction: column;
+  padding-bottom: 59px;
 }
 
 .additional-info-list-item {
@@ -39,6 +40,7 @@
   .additional-info {
     gap: 16px;
     flex-direction: column-reverse;
+    padding-bottom: 0px;
   }
   .additional-info-list-item {
     padding: 0 140px;
