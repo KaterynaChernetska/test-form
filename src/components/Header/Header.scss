@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 30px 16px 36px 30px;
+  padding: 28px 16px 36px 30px;
 }
 
 .logo-link {
@@ -52,17 +52,25 @@
   background-color: var(--background-color);
   display: flex;
   border-radius: 6px;
-  padding: 7px 13px;
+  padding: 6px;
   gap: 4px;
   font-size: 11px;
   font-weight: 600;
   align-items: center;
   justify-content: center;
+  height: 24px;
 }
 
+.header-date-container li:first-child {
+  width: 88px;
+}
+
+.header-date-container li:nth-child(2) {
+  width: 84px;
+}
 @include screen-size("medium") {
   .header {
-    padding: 36px 60px;
+    padding: 32px 60px;
   }
   .logo-svg {
     width: 50px;
@@ -78,8 +86,8 @@
     height: 15.75px;
   }
   .calendar-svg {
-    width: 14px;
-    height: 14px;
+    width: 15px;
+    height: 15px;
   }
 
   .clock-svg {
@@ -90,13 +98,33 @@
     gap: 18px;
   }
   .header-date-container li {
-    width: 141px;
+   height: 40px;
     font-size: 14px;
+    gap: 6px;
+  }
+  .header-date-container li:first-child {
+    width: 141px;
+  }
+  
+  .header-date-container li:nth-child(2) {
+    width: 141px;
   }
 }
 
 @include screen-size("large") {
   .header {
-    padding: 34px 256px;
+    padding: 32px 256px;
+  }
+  .logo-link{
+    width: 182px;
+    height: 56px;
+  }
+  .logo-svg {
+    width: 49.87px;
+    height: 56px;
+  }
+  .calendar-svg {
+    width: 15px;
+    height: 15px;
   }
 }

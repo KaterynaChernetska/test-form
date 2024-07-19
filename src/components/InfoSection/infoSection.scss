@@ -28,21 +28,29 @@
 .info-section-title {
   color: var(--pink-accent-color);
   text-transform: uppercase;
-  font-size: 52px;
+  font-size: 52.73px;
+  width: 290px;
   font-weight: 800;
   font-family: "Gilroy-Bold", sans-serif;
 }
 
 .info-section-subtitle {
-  margin-bottom: 16px;
+  margin-bottom: 23.72px;
 }
 
 .info-section-subtitle p:first-child {
   display: inline-block;
   margin-right: 12px;
+  width: 77px;
+  height: 28px;
+  font-weight: 800;
   border-radius: 3.57px;
   background-color: var(--pink-accent-color);
   transform: rotate(-3.49deg);
+}
+
+.accent-information {
+  font-weight: 500;
 }
 
 .info-section-subtitle p:first-child .inner-text {
@@ -60,24 +68,35 @@
 }
 .info-section-information {
   margin-bottom: 20px;
+  font-weight: 400 !important;
 }
-
 
 @include screen-size("medium") {
   .info-section-name {
     font-size: 16px;
     gap: 6px;
     width: 119px;
+    height: 32px;
   }
   .info-section-name img {
     width: 17.2px;
     height: 17.2px;
   }
   .info-section-title {
+    width: 427px;
     font-size: 77px;
+    line-height: 94.33px;
+  }
+
+  .info-section-subtitle p:first-child {
+    margin-right: 16.27px;
+    width: 109px;
+    height: 45px;
+
   }
   .info-section-subtitle p:first-child .inner-text {
-    font-size: 23px;
+    font-size: 24px;
+    font-weight: 800;
   }
   .info-section-subtitle span {
     font-size: 21px;
@@ -88,7 +107,11 @@
   .info-section-information {
     font-size: 18px;
     margin-bottom: 58px;
+    font-weight: 400;
     padding: 0 140px;
+  }
+  .accent-information{
+    font-weight: 500;
   }
 }
 
@@ -101,7 +124,7 @@
   .info-section-container {
     align-items: flex-start;
   }
-  .info-section-information{
+  .info-section-information {
     align-self: self-start;
     text-align: left;
   }

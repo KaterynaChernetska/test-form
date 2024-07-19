@@ -4,18 +4,18 @@ import "./additionalInfo.scss";
 
 function AdditionalInfo() {
   return (
-    <ul className="additional-info ">
+    <ul className="additional-info">
       <li className="additional-info-list-item">
         <img src={Gift} className="gift-svg" alt="Gift" />
         <ul className="inner-list">
-          <li>Бонус за регистрацию</li>
+          <li className="bonus">Бонус за регистрацию</li>
           <li>PDF-файл "5 преимуществ профессии веб-дизайнера" </li>
         </ul>
       </li>
       <li className="additional-info-list-item">
         <img src={Founder} className="founder-svg" alt="Founder" />
         <ul className="inner-list">
-          <li>
+          <li className="founder-name">
             Киррилл <span className="inner-list-name"> КАСАТОНОВ</span>
           </li>
           <li>
